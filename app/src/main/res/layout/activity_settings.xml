@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="7dp">
+
+
+        <TextView
+            android:id="@+id/settings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/settings"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/title_font" />
+
+
+        <ImageView
+            android:id="@+id/settings_sounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@null"
+            android:src="@drawable/sounds_level_list" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/settings_title"
+            >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/settings_my_deck_button"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_black_bgr"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/settings_avatar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"/>
+
+
+                    <TextView
+                        android:id="@+id/settings_name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/settings_edit_button"
+                        android:layout_toRightOf="@+id/settings_avatar"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:shadowColor="@android:color/black"
+                        android:shadowRadius="5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_font"  />
+
+
+                    <TextView
+                        android:id="@+id/settings_edit_button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rounded_background_green_button_selector"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:padding="5dp"
+                        android:shadowColor="@android:color/black"
+                        android:shadowRadius="5"
+                        android:gravity="center"
+                        android:text="@string/edit"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_font"  />
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounded_black_bgr"
+                    android:padding="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/settings_my_coins_ico"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/setup_my_coins"/>
+
+
+                    <TextView
+                        android:id="@+id/settings_my_coins_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/settings_get_more_button"
+                        android:layout_toRightOf="@+id/settings_my_coins_ico"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:padding="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:shadowColor="@android:color/black"
+                        android:shadowRadius="5"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_font"  />
+
+
+                    <TextView
+                        android:id="@+id/settings_get_more_button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rounded_background_green_button_selector"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:padding="5dp"
+                        android:shadowColor="@android:color/black"
+                        android:shadowRadius="5"
+                        android:gravity="center"
+                        android:text="@string/get_more"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_font" />
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_black_bgr"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/settings_statistic_ico"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/setup_statistics"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/settings_statistics_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/settings_view_button"
+                        android:layout_toRightOf="@+id/settings_statistic_ico"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:padding="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:singleLine="true"
+                        android:shadowColor="@android:color/black"
+                        android:shadowRadius="5"
+                        android:text="@string/statistics"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_font"  />
+
+
+                    <TextView
+                        android:id="@+id/settings_view_button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rounded_background_green_button_selector"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:shadowColor="@android:color/black"
+                        android:shadowRadius="5"
+                        android:text="@string/view"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_font"  />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@id/settings_my_deck_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                >
+
+                <ImageView
+                    android:id="@+id/settings_my_deck_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/settings_my_deck_title"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/decks_level_list" />
+
+                <TextView
+                    android:id="@+id/settings_my_deck_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/settings_my_deck_image"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@id/settings_my_deck_image"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="fonts/OleoScript-Bold.ttf"
+                    android:gravity="center"
+                    android:shadowColor="@android:color/black"
+                    android:shadowRadius="5"
+                    android:text="@string/my_deck"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/medium_font" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="7dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowRadius="5"
+            android:shadowColor="@android:color/black"
+            android:text="@string/host_new_game"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/title_font" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/texas_holdem_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/texas_holdem_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentTop="true"
+                        android:layout_above="@+id/texas_holdem_title"
+                        android:paddingBottom="7dp"
+                        android:src="@drawable/holdem_pic" />
+                    <TextView
+                        android:id="@id/texas_holdem_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:shadowRadius="5"
+                        android:text="@string/texas_holdem"
+                        android:shadowColor="@android:color/black"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/medium_bigger_font" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/blackjack_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/blackjack_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentTop="true"
+                        android:layout_above="@+id/blackjack_title"
+                        android:paddingBottom="7dp"
+                        android:src="@drawable/blackjack_pic" />
+
+                    <TextView
+                        android:id="@id/blackjack_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:shadowRadius="5"
+                        android:shadowColor="@android:color/black"
+                        android:text="@string/blackjack"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/medium_bigger_font" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/hearts_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/hearts_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentTop="true"
+                        android:paddingBottom="7dp"
+                        android:layout_above="@+id/hearts_title"
+                        android:src="@drawable/hearts_pic" />
+
+                    <TextView
+                        android:id="@id/hearts_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignParentBottom="true"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:shadowRadius="5"
+                        android:shadowColor="@android:color/black"
+                        android:text="@string/hearts"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/medium_bigger_font" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/war_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/war_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentTop="true"
+                        android:layout_above="@+id/war_title"
+                        android:paddingBottom="7dp"
+                        android:src="@drawable/war_pic" />
+
+                    <TextView
+                        android:id="@id/war_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:shadowRadius="5"
+                        android:text="@string/war"
+                        android:shadowColor="@android:color/black"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/medium_bigger_font" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/three_5_8_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/three_5_8_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentTop="true"
+                        android:layout_above="@+id/three_5_8_title"
+                        android:paddingBottom="7dp"
+                        android:src="@drawable/three_5_8_coming_soon" />
+
+                    <TextView
+                        android:id="@id/three_5_8_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_above="@+id/three_5_8_title"
+                        android:gravity="center"
+                        android:rotation="30"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:shadowRadius="5"
+                        android:text="@string/coming_soon"
+                        android:shadowColor="@android:color/black"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/medium_font" />
+
+                    <TextView
+                        android:id="@id/three_5_8_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="fonts/OleoScript-Bold.ttf"
+                        android:shadowRadius="5"
+                        android:text="@string/three_five_eight"
+                        android:shadowColor="@android:color/black"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/medium_bigger_font" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

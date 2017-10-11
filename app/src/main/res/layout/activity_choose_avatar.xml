@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="7dp">
+
+
+        <TextView
+            android:id="@+id/settings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/welcome"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/title_font" />
+
+        <ImageView
+            android:id="@+id/settings_take_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/takephoto_button_selector"/>
+
+
+        <GridView
+            android:id="@+id/avatars_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/settings_title"
+            android:background="@drawable/rounded_black_bgr"
+            android:horizontalSpacing="10dp"
+            android:numColumns="6"
+            android:padding="10dp"
+            android:verticalSpacing="10dp" />
+
+    </RelativeLayout>
+</FrameLayout>

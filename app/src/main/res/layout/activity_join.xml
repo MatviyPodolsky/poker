@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="7dp">
+
+        <TextView
+            android:id="@+id/join_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/join_game"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/title_font" />
+
+        <ListView
+            android:id="@+id/join_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_above="@+id/join_state"
+            android:layout_below="@id/join_title" />
+
+        <TextView
+            android:id="@+id/join_list_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/no_games_yet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_font" />
+
+        <TextView
+            android:id="@+id/join_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/settings"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/title_font" />
+
+        <TextView
+            android:id="@+id/join_state_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/join_state"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/title_font" />
+
+    </RelativeLayout>
+</FrameLayout>

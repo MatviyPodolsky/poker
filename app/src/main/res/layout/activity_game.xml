@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ingame_bgr_edit"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:keepScreenOn="true"
+    android:layerType="hardware"
+    tools:context=".activities.GameActivity_">
+
+
+    <ImageView
+        android:id="@+id/game_coin_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginRight="-20dp"
+        android:layout_toLeftOf="@+id/game_coin_1"
+        android:contentDescription="@null"
+        android:layerType="hardware"
+        android:src="@drawable/chip_2" />
+
+    <ImageView
+        android:id="@id/game_coin_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-12dp"
+        android:layout_marginRight="-10dp"
+        android:contentDescription="@null"
+        android:layerType="hardware"
+        android:src="@drawable/chip_1" />
+
+    <ImageView
+        android:id="@+id/game_coin_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-12dp"
+        android:layout_toLeftOf="@id/game_coin_2"
+        android:contentDescription="@null"
+        android:src="@drawable/chip_5" />
+
+    <ImageView
+        android:id="@+id/game_coin_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-12dp"
+        android:layout_marginRight="-20dp"
+        android:layout_toLeftOf="@id/game_coin_5"
+        android:contentDescription="@null"
+        android:layerType="hardware"
+        android:src="@drawable/chip_10" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/game_coin_10"
+        android:layout_marginBottom="-30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@id/game_coin_10"
+        android:clipToPadding="true">
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:id="@+id/game_hidden_cards_background"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/rounded_light_bgr"
+            android:rotation="-10"
+            android:scaleType="fitXY" />
+
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-10dp"
+            android:layout_toRightOf="@id/game_hidden_cards_background"
+            android:background="@drawable/rounded_light_bgr"
+            android:rotation="10"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/game_hidden_cards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/game_coin_10"
+        android:layout_marginBottom="-30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@id/game_coin_10"
+        android:clipToPadding="true">
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:id="@+id/game_hand_first_card"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:rotation="-10"
+            android:scaleType="fitXY" />
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:id="@+id/game_hand_first_card_revers"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:alpha="0"
+
+            android:rotation="-10"
+            android:scaleType="fitXY"
+            android:src="@drawable/card_back_level_list"
+            android:visibility="visible" />
+
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:id="@+id/game_hand_second_card"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-10dp"
+            android:layout_toRightOf="@+id/game_hand_first_card"
+            android:rotation="10"
+            android:scaleType="fitXY" />
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:id="@+id/game_hand_second_card_revers"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-10dp"
+            android:layout_toRightOf="@+id/game_hand_first_card_revers"
+            android:alpha="0"
+            android:rotation="10"
+            android:scaleType="fitXY"
+            android:src="@drawable/card_back_level_list"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/game_settings"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_black_bgr"
+        android:contentDescription="@null"
+        android:padding="8dp"
+        android:src="@drawable/settings_button" />
+
+
+    <TextView
+        android:id="@+id/game_pot"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/game_settings"
+        android:background="@drawable/rounded_red_bgr"
+        android:fontFamily="fonts/OleoScript-Bold.ttf"
+        android:padding="8dp"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        android:text="Pot: 0$"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+    <LinearLayout
+        android:id="@+id/game_status_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/game_pot"
+        android:contentDescription="@null"
+        android:orientation="horizontal"
+        android:src="@drawable/settings_button">
+
+        <RelativeLayout
+            android:id="@+id/game_player_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_black_bgr"
+            android:minWidth="100dp"
+            android:paddingRight="3dp">
+
+            <ImageView
+                android:id="@+id/game_player_1_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/avatar_1" />
+
+            <TextView
+                android:id="@+id/game_player_1_blind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/game_player_1_avatar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-15dp"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:textColor="@color/yellow"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/game_player_1_dealer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/game_player_1_avatar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-15dp"
+                android:layout_toRightOf="@id/game_player_1_blind"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:text="@string/d"
+                android:textColor="@color/yellow"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/game_player_1_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/game_player_1_avatar"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/game_player_1_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/game_player_1_cash"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/game_player_1_avatar"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/game_player_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/rounded_black_bgr"
+            android:minWidth="100dp"
+            android:paddingRight="3dp">
+
+            <ImageView
+                android:id="@+id/game_player_2_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/avatar_1" />
+
+            <TextView
+                android:id="@+id/game_player_2_blind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/game_player_2_avatar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-15dp"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:textColor="@color/yellow"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/game_player_2_dealer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/game_player_2_avatar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-15dp"
+                android:layout_toRightOf="@id/game_player_2_blind"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:text="@string/d"
+                android:textColor="@color/yellow"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/game_player_2_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/game_player_2_avatar"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/game_player_2_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/game_player_2_cash"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/game_player_2_avatar"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/game_player_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:minWidth="100dp"
+            android:paddingRight="3dp"
+            android:background="@color/black_with_alpha"
+            >
+
+            <ImageView
+                android:id="@+id/game_player_3_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/avatar_1" />
+
+            <TextView
+                android:id="@+id/game_player_3_blind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/game_player_3_avatar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-15dp"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:textColor="@color/yellow"
+
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/game_player_3_dealer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/game_player_3_avatar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-15dp"
+                android:layout_toRightOf="@id/game_player_3_blind"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:text="@string/d"
+                android:textColor="@color/yellow"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/game_player_3_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/game_player_3_avatar"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/game_player_3_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/game_player_3_cash"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/game_player_3_avatar"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/game_player_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/rounded_black_bgr"
+            android:minWidth="100dp"
+            android:paddingRight="3dp">
+
+            <ImageView
+                android:id="@+id/game_player_4_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/avatar_1" />
+
+            <TextView
+                android:id="@+id/game_player_4_blind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/game_player_4_avatar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-15dp"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:text="@string/d"
+                android:textColor="@color/yellow"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/game_player_4_dealer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/game_player_4_avatar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-15dp"
+                android:layout_toRightOf="@id/game_player_4_blind"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:textColor="@color/yellow"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/game_player_4_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/game_player_4_avatar"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/game_player_4_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/game_player_4_cash"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/game_player_4_avatar"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/game_coin_10"
+        android:layout_below="@id/game_settings"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_light_bgr" />
+
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_light_bgr" />
+
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_light_bgr" />
+
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_light_bgr" />
+
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_light_bgr" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/game_card_table"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/game_coin_10"
+        android:layout_below="@id/game_settings"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
+
+        <com.kubatatami.poker.ui.CardRatioImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/game_bet_container"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:layout_above="@id/game_coin_2"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/game_accept_bet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:adjustViewBounds="true"
+            android:src="@drawable/accept_selector" />
+
+        <TextView
+            android:id="@+id/game_bet_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:background="@drawable/rounded_black_bgr"
+            android:gravity="center"
+            android:text="Bet: 0$"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/medium_font" />
+
+        <ImageView
+            android:id="@+id/game_reject_bet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:adjustViewBounds="true"
+            android:src="@drawable/cancel_selector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/game_decision_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_black_bgr"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/game_rise_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_background_green_button_selector"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:gravity="center"
+            android:padding="10dp"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/rise"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/medium_font"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/game_call_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_background_green_button_selector"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:gravity="center"
+            android:padding="10dp"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/call"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/medium_font"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/game_fold_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_background_red_button_selector"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:gravity="center"
+            android:padding="10dp"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/fold"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/medium_font"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <com.kubatatami.poker.ui.ClipLinearLayout
+        android:id="@+id/game_settings_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/game_settings"
+        android:layout_alignRight="@id/game_settings"
+        android:layout_below="@id/game_settings"
+        android:background="@drawable/rounded_black_bgr"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/game_sound_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/sounds_level_list" />
+
+        <TextView
+            android:id="@+id/game_exit_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/exit_button_selector" />
+
+    </com.kubatatami.poker.ui.ClipLinearLayout>
+
+    <include layout="@layout/game_ready_include" />
+
+    <include layout="@layout/holdem_blend_include" />
+
+    <include layout="@layout/waiting_for_player_include" />
+
+
+    <include layout="@layout/players_disconnect_include" />
+
+
+</RelativeLayout>

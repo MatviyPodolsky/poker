@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/disconnected_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_with_darker_alpha"
+    android:visibility="gone"
+
+    >
+
+    <TextView
+        android:id="@+id/disconnected_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="fonts/OleoScript-Bold.ttf"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        android:text="@string/user_disconnected"
+        android:textColor="@color/white"
+        android:textSize="@dimen/medium_bigger_font" />
+
+
+    <TextView
+        android:id="@+id/disconnected_continue_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/disconnected_text"
+        android:background="@drawable/rounded_background_green_button_selector"
+        android:fontFamily="fonts/OleoScript-Bold.ttf"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        android:gravity="center"
+        android:text="@string/continue_game"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/medium_font" />
+
+</RelativeLayout>

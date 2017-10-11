@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="7dp">
+
+        <TextView
+            android:id="@+id/join_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/join_game"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/title_font" />
+
+
+        <TextView
+            android:id="@+id/join_detail_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            android:src="@drawable/title_join_game"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/title_font" />
+
+    </RelativeLayout>
+
+</FrameLayout>

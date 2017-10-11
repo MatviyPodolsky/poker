@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="title_font">62sp</dimen>
+    <dimen name="small_font">25sp</dimen>
+    <dimen name="medium_font">36sp</dimen>
+    <dimen name="medium_bigger_font">39sp</dimen>
+    <dimen name="big_font">45sp</dimen>
+</resources>

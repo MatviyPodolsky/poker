@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Virtual Play Cards</string>
+    <string name="facebook_app_id">700535226697514</string>
+    <string name="no_connected_users">No connected users.</string>
+    <string name="server_error">Server error</string>
+    <string name="player_name">Player Name</string>
+    <string name="bet_">Bet: $%1$s</string>
+    <string name="all_in">All In</string>
+    <string name="rise">Rise</string>
+    <string name="call">Call</string>
+    <string name="check">Check</string>
+    <string name="fold">Fold</string>
+    <string name="bet">Bet</string>
+    <string name="small_blind">Small Blind</string>
+    <string name="big_blind">Big Blind</string>
+    <string name="entry_fee">Entry Fee</string>
+    <string name="host_texas_holdem">Host Texas Hold\'em</string>
+    <string name="host">Host</string>
+    <string name="join">Join</string>
+    <string name="join_game">Join Game</string>
+    <string name="settings">Setup</string>
+    <string name="welcome">Welcome!</string>
+    <string name="tap_to_remove">tap to remove player</string>
+    <string name="tap_to_add">tap to add player</string>
+    <string name="change_photo">Change \nPhoto</string>
+    <string name="edit">Edit</string>
+    <string name="get_more">Get More</string>
+    <string name="view">View</string>
+    <string name="statistics">Statistics</string>
+    <string name="you_won_game">You won this game</string>
+    <string name="you_lost_game">You loose this game</string>
+
+    <string name="pot">Pot: $%1$s</string>
+    <string name="rise_">Rise $%1$s</string>
+    <string name="cash_">$%1$s</string>
+    <string name="d">D</string>
+    <string name="b">B</string>
+    <string name="s">S</string>
+    <string name="host_new_game">Host New Game</string>
+    <string name="texas_holdem">Texas Hold\'em</string>
+    <string name="texas_holdem_setup">Texas Hold\'em setup</string>
+    <string name="my_deck">My Deck</string>
+    <string name="play">Play!</string>
+    <string name="host_">Host!</string>
+    <string name="choose_your_deck">Choose Your Deck</string>
+    <string name="blackjack">BlackJack</string>
+    <string name="hearts">Hearts</string>
+    <string name="three_five_eight">3 5 8</string>
+    <string name="war">War</string>
+    <string name="dimension">/drawable-xhdpi/</string>
+
+    <string name="no">No!</string>
+    <string name="yes">Yes!</string>
+    <string name="quit">Quit</string>
+    <string name="ready">Ready</string>
+    <string name="close">Close</string>
+    <string name="coming_soon">Coming Soon!</string>
+    <string name="are_you_sure_you_want_to_quit">Are you sure\nyou want to quit?</string>
+    <string name="looking_for_games">Looking for games</string>
+    <string name="try_again">Try again</string>
+    <string name="no_games_yet">No games yet</string>
+    <string name="select_or_take_picture">Select or take a new Picture</string>
+    <string name="tap_to_show_cards">Tap and hold \nto see your cards</string>
+    <string name="swipe_to_bet">Swipe chips to bet</string>
+    <string name="tap_to_options">Tap here for options</string>
+    <string name="dont_show_it_again">Don\’t show it again</string>
+    <string name="dismiss_tutorial">Dismiss this tutorial?</string>
+    <string name="you_lost_the_hand">You lost the hand</string>
+    <string name="you_lost">You lost</string>
+    <string name="you_won_the_hand">You won the hand</string>
+    <string name="you_won">You won</string>
+    <string name="lost_">Lost: $%1$s</string>
+    <string name="won_">Won: $%1$s</string>
+    <string name="ok">OK</string>
+    <string name="waiting_for_players">Waiting for players</string>
+    <string name="my_profile">My Profile</string>
+    <string name="waiting_for_">Waiting for %1$s...</string>
+    <string name="ready_to_play">Ready to play?</string>
+    <string name="user_disconnected">User(s) disconnected. Continue playing or wait?</string>
+    <string name="continue_game">Continue</string>
+    <string name="done">Done</string>
+
+    <string name="banner_admob_test_id">ca-app-pub-1331509526175967/5047274534</string>
+    <string name="intersticial_admob_test_id">ca-app-pub-1331509526175967/5186875334</string>
+
+
+
+</resources>

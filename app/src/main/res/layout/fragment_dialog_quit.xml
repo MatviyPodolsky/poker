@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BB000000">
+
+    <LinearLayout
+        android:id="@+id/dialog_quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_black_bgr"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/dialog_quit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:gravity="center"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/are_you_sure_you_want_to_quit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_font" />
+
+
+        <TextView
+            android:id="@+id/dialog_quit_no"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_background_green_button_selector"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:gravity="center"
+            android:padding="10dp"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/no"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_font"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/dialog_quit_yes"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_background_red_button_selector"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:gravity="center"
+            android:padding="10dp"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/quit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_font"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/dialog_dont_show_it_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp">
+
+
+            <ImageView
+                android:id="@+id/dialog_tick_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tick_level_list"/>
+
+            <TextView
+                android:id="@+id/dialog_tick_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/dialog_tick_image"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:text="@string/dont_show_it_again"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_font" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

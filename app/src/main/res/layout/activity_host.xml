@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:orientation="vertical"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="7dp">
+
+
+        <com.kubatatami.poker.ui.VerticleTextView
+            android:id="@+id/host_tap_to_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/tap_to_remove"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_font" />
+
+        <com.kubatatami.poker.ui.VerticleTextView
+            android:id="@+id/host_tap_to_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/tap_to_add"
+            android:textColor="@color/green"
+            android:textSize="@dimen/medium_font" />
+
+
+        <LinearLayout
+            android:id="@+id/host_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/play_button_chip" />
+
+            <TextView
+                android:id="@+id/host_play_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:text="@string/play"
+                android:textColor="@color/green"
+                android:textSize="@dimen/title_font" />
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/play_button_chip" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/host_reload"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/host_tap_to_add"
+            android:background="@drawable/rounded_black_bgr"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:src="@drawable/reload"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/host_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/host_texas_holdem"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/title_font" />
+
+        <View
+            android:id="@+id/host_center"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+
+        <ListView
+            android:id="@+id/accepted_players"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_above="@id/host_play"
+            android:layout_below="@id/host_title"
+            android:layout_toLeftOf="@id/host_center"
+            android:layout_toRightOf="@id/host_tap_to_remove" />
+
+        <ListView
+            android:id="@+id/host_all_players"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_above="@id/host_play"
+            android:layout_below="@id/host_title"
+            android:layout_toLeftOf="@id/host_tap_to_add"
+            android:layout_toRightOf="@id/host_center" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/host_state_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/host_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:text="@string/waiting_for_players"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/title_font" />
+
+            <TextView
+                android:id="@+id/host_state_dots"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/host_state"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/title_font" />
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+    android:layout_height="match_parent"
+             tools:context=".activities.GameOverActivity_">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="7dp">
+
+
+        <TextView
+            android:id="@+id/gameover_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/statistics"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/title_font" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gameover_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/gameover_avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/gameover_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:text="@string/statistics"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/title_font" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

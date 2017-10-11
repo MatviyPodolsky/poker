@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_ready_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/rounded_black_bgr"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:paddingTop="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+
+    <TextView
+        android:id="@+id/game_ready_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="visible"
+        android:fontFamily="fonts/OleoScript-Bold.ttf"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        android:gravity="center"
+        android:text="@string/ready_to_play"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/medium_font" />
+
+    <TextView
+        android:id="@+id/game_ready_ready_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:background="@drawable/rounded_background_green_button_selector"
+        android:fontFamily="fonts/OleoScript-Bold.ttf"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/ready"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/medium_font" />
+
+    <TextView
+        android:id="@+id/game_ready_quit_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:background="@drawable/rounded_background_red_button_selector"
+        android:fontFamily="fonts/OleoScript-Bold.ttf"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/quit"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/medium_font" />
+
+
+</LinearLayout>

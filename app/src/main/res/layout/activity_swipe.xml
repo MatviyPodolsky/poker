@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@null"
+    android:scaleType="centerCrop"
+    android:keepScreenOn="true"
+    tools:context=".activities.SwipeActivity_">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/swipe_to_deal_bgr"
+        android:contentDescription="@null"/>
+
+    <com.kubatatami.poker.ui.PaperStackLayout
+        android:id="@+id/card_stack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="-30dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/bottom_info"/>
+
+    <ImageView
+        android:id="@id/bottom_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerInside"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:contentDescription="@null"
+        android:src="@drawable/title_swipe_up_to_deal"/>
+
+
+</RelativeLayout>

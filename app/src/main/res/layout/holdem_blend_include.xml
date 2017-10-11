@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/holdem_blend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_with_alpha"
+    android:visibility="gone"
+
+    >
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="fonts/OleoScript-Bold.ttf"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        android:text="@string/tap_to_show_cards"
+        android:rotation="10"
+        android:layout_margin="40dp"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/big_font" />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:fontFamily="fonts/OleoScript-Bold.ttf"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        android:text="@string/swipe_to_bet"
+        android:rotation="-10"
+        android:layout_margin="40dp"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/big_font" />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:fontFamily="fonts/OleoScript-Bold.ttf"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        android:text="@string/tap_to_options"
+        android:rotation="10"
+        android:layout_margin="40dp"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/big_font" />
+
+
+</RelativeLayout>

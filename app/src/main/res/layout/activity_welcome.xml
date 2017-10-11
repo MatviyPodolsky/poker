@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="7dp">
+
+        <TextView
+            android:id="@+id/welcome_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/welcome"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/title_font" />
+
+
+        <LinearLayout
+            android:id="@+id/welcome_main_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcome_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_black_bgr"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
+
+
+
+
+            <ImageView
+                android:id="@+id/welcome_avatar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter" />
+
+            <EditText
+                android:id="@+id/welcome_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_white_bgr"
+                android:fontFamily="fonts/OleoScript-Bold.ttf"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="5"
+                android:gravity="center"
+                android:hint="@string/player_name"
+                android:layout_gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:padding="5dp" />
+
+
+
+            <com.facebook.widget.LoginButton
+                android:id="@+id/welcome_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp" />
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/welcome_done"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcome_main_container"
+            android:background="@drawable/rounded_background_selector"
+            android:fontFamily="fonts/OleoScript-Bold.ttf"
+            android:gravity="center"
+            android:padding="3dp"
+            android:shadowColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:shadowRadius="5"
+            android:enabled="false"
+            android:text="@string/done"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/small_font"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</FrameLayout>

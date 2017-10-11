@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/waiting_for_player_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:padding="10dp"
+    android:background="@drawable/rounded_black_bgr"
+    android:visibility="gone"
+
+    >
+
+    <TextView
+        android:id="@+id/waiting_for_player_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="fonts/OleoScript-Bold.ttf"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        android:text="@string/waiting_for_"
+        android:textColor="@color/white"
+        android:textSize="@dimen/big_font" />
+
+
+
+
+</RelativeLayout>
